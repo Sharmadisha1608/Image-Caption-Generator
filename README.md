@@ -17,3 +17,7 @@
 
 ##### Training Phase
 ###### During training phase we provide pair of input image and its appropriate captions to the image captioning model. The VGG model is trained to identify all possible objects in an image. While LSTM part of model is trained to predict every word in the sentence after it has seen image as well as all previous words. For each caption we add two additional symbols to denote the starting and ending of the sequence. Whenever stop word is encountered it stops generating sentence and it marks end of string. Loss function for model is calculated as, where I represents input image and S represents the generated caption. N is length of generated sentence. pt and St represent probability and predicted word at the time t respectively. During the process of training we have tried to minimize this loss function.
+
+##### Input-Output Screenshot
+![image](https://user-images.githubusercontent.com/56456928/133818494-412c5e56-4258-4665-bae8-01f35e723c75.png)
+![image](https://user-images.githubusercontent.com/56456928/133818543-0a5f7e4d-9b21-4443-be62-3743b3982df9.png)
