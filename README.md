@@ -4,6 +4,9 @@
 ###### In this I have proposed a hybrid system employing the use of multilayer Convolutional Neural Network(CNN) to generate vocabulary describing the images and a Long Short Term Memory (LSTM) to accurately structure meaningful sentences using the generated keywords. The convolutional neural network compares the target image to a large dataset of training images, then generates an accurate description using the trained captions. We showcase the efficiency of our proposed model using the Flickr8K dataset.
 ![image](https://user-images.githubusercontent.com/56456928/133123967-9a2133c0-c7a6-46e5-bd3f-b5fc834b8a68.png)
 
+##### Pipeline
+###### Store Image ->ResNet -> Image Encode-> Model-> Caption
+
 ###### The model consists of 3 phases:
 ###### A. Image Feature Extraction
 ###### The features of the images from the Flickr 8K dataset is extracted using the VGG 16 model due to the performance of the model in object identification. The VGG is a convolutional neural network which consists of consists of 16 layer which has a pattern of 2 convolution layers followed by 1 dropout layers until the fully connected layer at the end. The dropout layers are present to reduce overfitting the training dataset, as this model configuration learns very fast. These are processed by a Dense layer to produce a 4096 vector element representation of the photo and passed on to the LSTM layer.
